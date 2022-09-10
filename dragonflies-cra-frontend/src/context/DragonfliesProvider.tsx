@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useState, createContext, useEffect, useReducer } from 'react';
+import React, { useContext, useState, createContext, useEffect } from 'react';
 import { Dragonfly } from '../interfaces/Dragonfly';
 import { TypeViewEnum } from '../interfaces/TypeViewEnum';
 
@@ -46,7 +46,7 @@ const DragonfliesProvider: React.FC<Props> = ({ children }) => {
     .finally(() => {
       setLoading(false);
     });
-  }, [list])
+  }, [])
 
   return (
     <DragonfliesContext.Provider value={{list, error, loading, updateTypeView}}>

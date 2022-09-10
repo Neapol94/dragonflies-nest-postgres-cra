@@ -8,6 +8,7 @@ import { useDragonfliesContext } from '../../context/DragonfliesProvider'
 import './Dragonflies.scss';
 import ControlBar from '../../components/ControlBar/ControlBar';
 import TileListView from '../../components/ListViewTypes/TileListView';
+import ItemListView from '../../components/ListViewTypes/ItemListView';
 
 const Dragonflies = () => {
 
@@ -35,8 +36,7 @@ const Dragonflies = () => {
             <TileListView />
           )}
           {updateTypeView.listType === TypeViewEnum.list && (
-            // <TableListView />
-            <p>list: {updateTypeView.listType}</p>
+            <ItemListView />
           )}
         </div>
       </div>

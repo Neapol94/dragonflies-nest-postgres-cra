@@ -8,3 +8,11 @@ export async function getListOfDragonflies() {
   }).then(response => response.data);
   return data;
 }
+
+export async function getDragonflyById(id: number) {
+  const data = await axios({
+    method: 'get',
+    url: `http://localhost:8080/dragonflies/${id}`
+  }).then(response => response.data);
+  return data;
+}

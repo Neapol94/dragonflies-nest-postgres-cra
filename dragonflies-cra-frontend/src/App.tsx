@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import Dragonflies from './pages/Dragonflies/Dragonflies';
 import './App.scss';
 import DragonfliesProvider from './context/DragonfliesProvider';
+import DragonflyDetails from './pages/DragonflyDetails/DragonflyDetails';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dragonflies" element={<Dragonflies />} />
+        <Route path="/dragonflies/:id" element={<DragonflyDetails />} />
       </Routes>
       </DragonfliesProvider>
       <Footer />

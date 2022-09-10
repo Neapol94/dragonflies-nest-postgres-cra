@@ -1,0 +1,14 @@
+@import url('../../App.scss');
+
+.dragonfly-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  img {
+    max-width: 50%;
+  }
+  .dragonfly-main-details {
+    max-width: 50%;
+  }
+}
