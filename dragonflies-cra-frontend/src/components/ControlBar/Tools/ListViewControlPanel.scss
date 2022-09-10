@@ -1,0 +1,40 @@
+@import url('../../../App.scss');
+
+.view-control-panel {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  background-color: var(--primary);
+  border-radius: 5%;
+  padding: 10px;
+
+  .view-option {
+    width: 32px;
+    height: 32px;
+    transition: all .5s;
+    text-align: center;
+    color: var(--secondary);
+    border: none;
+    border-radius: 10%;
+    background-color: var(--primary);
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(80%);
+      transition: all .5s;
+    }
+
+    & svg {
+      position:relative;
+      top: calc(50% - 18px);
+    }
+  }
+  .view-option.active {
+    color: var(--primary);
+    background-color: var(--secondary);
+
+    &:hover {
+      filter: brightness(.8);
+    }
+  }
+}

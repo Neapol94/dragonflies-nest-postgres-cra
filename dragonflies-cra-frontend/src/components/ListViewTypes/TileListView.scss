@@ -1,0 +1,23 @@
+@import url('../../App.scss');
+.tile-view-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+.single-tile {
+  background-color: var(--secondary);
+  border: 1px solid var(--primary);
+  width: 150px;
+  height: 200px;
+  margin: auto;
+
+  .single-tile-header {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 5px;
+    width: 100%;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,12 @@
+/* Custom Select wrapper */
+.sort-bar {
+  span.text {
+    margin-right: 5px;
+  }
+  #sort-bar-select {
+    position: relative;
+    width: 150px;
+    border-radius: .25em;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,23 @@
+@import url('../../../App.scss');
+
+span.text {
+  margin-right: 5px;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: var(--primary);
+  transition: .25s all ease;
+  pointer-events: none;
+}
