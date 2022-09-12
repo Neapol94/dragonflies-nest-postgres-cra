@@ -6,9 +6,11 @@ import SearchBar from './Tools/SearchBar';
 import SortBar from './Tools/SortBar';
 
 import './ControlBar.scss';
+import { useDragonfliesContext } from '../../context/DragonfliesProvider';
 
 const ControlBar = () => {
   
+  const {updateFilterQueries} = useDragonfliesContext();
   
   return (
     <>
@@ -17,6 +19,9 @@ const ControlBar = () => {
         <SortBar />
         <FilterBar />
         <ListViewControlPanel />
+      </div>
+      <div id="applied-filters">
+        {[updateFilterQueries.filterType].map(filter => <span>{filter.column}: <i>{filter.value}</i></span>)}
       </div>
     </>
   )

@@ -37,8 +37,11 @@ export class DragonflyController {
     return this.service.getDragonfly(id);
   }
   
-  @Get('/lestes')
-  getAllLestesDragonflies() {
-    return;
+  @Get('/filter/:column/:value')
+  public getDragonfliesByColumn(
+    @Param('column') column: string,
+    @Param('value') value: string,
+  ) {
+    return this.service.getDragonfliesByColumn(column, value);
   }
 }

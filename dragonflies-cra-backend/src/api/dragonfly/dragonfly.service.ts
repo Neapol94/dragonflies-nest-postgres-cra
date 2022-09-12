@@ -13,6 +13,10 @@ export class DragonflyService {
     return Dragonflies.findOne({ where: { id } });
   }
 
+  public getDragonfliesByColumn(column: string, columnValue: string): Promise<Dragonflies[]> {
+    return Dragonflies.findBy({[column]: columnValue});
+  }
+
   public createDragonfly(body: CreateDragonflyDto): Promise<Dragonflies> {
     const dragonfly: Dragonflies = new Dragonflies();
 

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { TypeViewEnum } from '../../../interfaces/TypeViewEnum';
 import { BsFillGridFill, BsList, BsTable } from 'react-icons/bs';
 import './ListViewControlPanel.scss'

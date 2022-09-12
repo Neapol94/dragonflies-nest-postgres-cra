@@ -1,5 +1,5 @@
 //libraries
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 //components/interfaces
 import TableListView from '../../components/ListViewTypes/TableListView';
 import { TypeViewEnum } from '../../interfaces/TypeViewEnum';
@@ -13,11 +13,11 @@ import ItemListView from '../../components/ListViewTypes/ItemListView';
 const Dragonflies = () => {
 
   const contextToUse = useDragonfliesContext();
-  const {loading, error, updateTypeView} = contextToUse;
+  const {loading, error, updateTypeView, updateFilterQueries} = contextToUse;
 
   useEffect(() => {
-    console.log("z rodzica: ", updateTypeView.listType)
-  }, [updateTypeView.listType])
+    // console.log("u mamy: ", updateFilterQueries.filterType)
+  }, [updateTypeView.listType, updateFilterQueries.filterType])
 
   return (
     

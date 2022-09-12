@@ -24,3 +24,8 @@ export interface Dragonfly {
 export interface Dragonflies {
   dragonflies: Dragonfly[];
 }
+
+export interface FilterType {
+  column: string;
+  value: string;
+}
