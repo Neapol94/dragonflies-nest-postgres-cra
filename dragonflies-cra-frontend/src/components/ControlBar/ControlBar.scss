@@ -8,4 +8,16 @@
 }
 #applied-filters {
   display: flex;
+  background-color: var(--primary);
+  padding: 15px;
+  
+  .active-filter-option {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 5px;
+    
+    .active-filter-button {
+      border: none;
+    }
+  }
 }

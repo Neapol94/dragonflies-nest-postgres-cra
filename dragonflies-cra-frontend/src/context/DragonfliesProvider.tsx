@@ -8,7 +8,7 @@ type DataForContext = {
   error: string | null,
   loading: boolean,
   updateTypeView: {listType: number, setListType: Function},
-  updateFilterQueries: {filterType: FilterType, setFilterType: Function}
+  updateFilterQueries: {filterType: FilterType[], setFilterType: Function}
 }
 
 const DragonfliesContext = createContext<DataForContext>({
@@ -16,7 +16,7 @@ const DragonfliesContext = createContext<DataForContext>({
   error: "",
   loading: false,
   updateTypeView: {listType: TypeViewEnum.table, setListType: () => {}},
-  updateFilterQueries: {filterType: {column: "rodzajLAT", value: "Lestes"}, setFilterType: () => {}},
+  updateFilterQueries: {filterType: [], setFilterType: () => {}},
 });
 
 type Props = {
@@ -29,7 +29,7 @@ const DragonfliesProvider: React.FC<Props> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [listType, setListType] = useState<TypeViewEnum>(TypeViewEnum.table)
-  const [filterType, setFilterType] = useState<FilterType>({column: "rodzajLAT", value: "Lestes"})
+  const [filterType, setFilterType] = useState<FilterType[]>([])
 
   const updateTypeView = {listType, setListType};
   const updateFilterQueries = {filterType, setFilterType};
