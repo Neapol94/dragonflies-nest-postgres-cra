@@ -1,6 +1,7 @@
 import axios from "axios";
+import { Dragonfly } from "../interfaces/Dragonfly";
 
-export async function getListOfDragonflies() {
+export async function getListOfDragonflies(): Promise<Dragonfly[]> {
   const data = await axios({
     method: 'get',
     url: 'http://localhost:8080/dragonflies'

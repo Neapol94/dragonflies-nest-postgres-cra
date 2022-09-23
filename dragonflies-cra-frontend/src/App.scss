@@ -6,13 +6,18 @@
   --dark: #212529;
 }
 
+body {
+  color: var(--primary);
+}
+
 .main{
   padding-bottom:60px;
   text-align: center;
   min-height: 40vw;
-  background-color:aliceblue;
+  background-color:var(--secondary);
   width: 80%;
   margin: auto;
   padding: 20px;
+  color: var(--primary);
 }
 

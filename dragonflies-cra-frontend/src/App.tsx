@@ -12,6 +12,7 @@ import './App.scss';
 import DragonfliesProvider from './context/DragonfliesProvider';
 import DragonflyDetails from './pages/DragonflyDetails/DragonflyDetails';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import LoginPage from './pages/Login/LoginPage';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/dragonflies" element={<Dragonflies />} />
         <Route path="/dragonflies/:id" element={<DragonflyDetails />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       </DragonfliesProvider>

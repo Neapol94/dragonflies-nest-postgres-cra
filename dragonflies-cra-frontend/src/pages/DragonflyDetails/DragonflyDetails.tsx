@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './DragonflyDetails.scss';
-import { getDragonflyById } from '../../dragonflies.service';
+import { getDragonflyById } from '../../services/dragonflies.service';
 import { Dragonfly } from '../../interfaces/Dragonfly';
 import { useParams } from 'react-router-dom';
 
