@@ -8,7 +8,7 @@ async function bootstrap() {
   const app: NestExpressApplication = await NestFactory.create(AppModule);
   const config: ConfigService = app.get(ConfigService);
   const port: number = config.get<number>('PORT');
-
+	// komentarz test
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
   app.enableCors();
   await app.listen(port, () => {
