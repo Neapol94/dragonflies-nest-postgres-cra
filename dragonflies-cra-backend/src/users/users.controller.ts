@@ -1,16 +1,21 @@
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Controller, Get, Inject, Post } from '@nestjs/common';
 import { User } from './user.entity';
 import { UsersService } from './users.service';
 
-@Controller('users')
+@Controller('user')
 export class UsersController {
 
   constructor(
     @Inject(UsersService) private readonly service: UsersService,
   ) {}
 
-  @Get('/all')
+  @Get('/get-all')
   public getAllUsers(): Promise<User[]> {
     return this.service.getAllUsers();
+  }
+
+  @Post('/signin')
+  public signInUser(): Promise<User[]> {
+    return this.service.signInUser();
   }
 }
